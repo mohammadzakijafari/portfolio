@@ -1,6 +1,9 @@
 "use client"
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import NavLink from './navLink';
 
 const menuLink = [
   { url: "/", title: "Home"},
@@ -11,20 +14,30 @@ const menuLink = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
-      <div className='hidden md:flex gap-4'>
+    <div className='h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl'>
+      {/* --------------------- Links -------------------- */}
+      <div className='hidden text-md md:flex gap-4 w-1/3'>
         {menuLink.map(link => (
-          <Link href={link.url} key={link.title} > { link.title } </Link>
+          <NavLink link={link} key={link.title} />
         ))}
       </div>
       {/* ------------- Logo --------------- */}
-      <div className='md:hidden'>
+      <div className='md:hidden lg:flex justify-center w-1/3 '>
         <Link
           href = "/"
-          className='text-sm bg-black rounded p-1 font-semibold flex items-center justify-center'>
+          className='text-md bg-black rounded p-1 font-semibold flex items-center justify-center'>
             <span className = 'text-white mr-1'> Zaki </span>
             <span className = 'w-12 h-8 rounded bg-white text-black flex items-center justify-center'> .dev </span>
           </Link>
+      </div>
+      {/* -------------- social accounts ---------------- */}
+      <div className='hidden md:flex items-center justify-end gap-8 w-1/3'>
+        <Link href = "">
+          <FaGithub size={40} />
+        </Link>
+        <Link href = "">
+          <FaLinkedin size={40} />
+        </Link>
       </div>
       {/* ------------- Responsive Menu --------------- */}
       <div className='md:hidden'>
