@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import { Roboto } from "next/font/google";
+import TransitionProvider from "./components/transitionProvider";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -34,14 +35,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} ${roboto.variable} font-sans`}
       >
-        <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-50">
-          <div className="h-24">
-            <Navbar />
-          </div>
-          <div className="h-[calc(100vh-6rem)]">
-            {children}
-          </div>
-        </div>
+        <TransitionProvider> { children } </TransitionProvider>
       </body>
     </html>
   );
