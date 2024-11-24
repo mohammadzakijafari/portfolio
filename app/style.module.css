@@ -24,23 +24,10 @@
     animation-range-start: normal;
     animation-range-end: normal; */
 }
-/* .profile-img:hover {
-    border-radius: 70% 30% 24% 76% / 42% 36% 64% 58%;
-} */
-/* @keyframes anim {
-    0% {
-        border-radius: 56% 44% 73% 27% / 45% 68% 32% 55%;
-    }
-    50% {
-        border-radius: 70% 30% 24% 76% / 42% 36% 64% 58%;
-    }
-    75% {
-        border-radius: 56% 44% 73% 27% / 45% 68% 32% 55%;
-    }
-    100% {
-        border-radius: 70% 30% 24% 76% / 42% 36% 64% 58%;
-    }
-} */
+.main-background {
+    background-color: #e5e5e5;
+}
+
 
 @keyframes morph {
     0% {

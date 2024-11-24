@@ -3,7 +3,7 @@
 import React from 'react'
 import {motion} from 'framer-motion'
 
-const PortfolioPage = () => {
+const ProjectPage = () => {
   return (
     <motion.div className="h-full"
       initial = {{ y: "-200vh"}}
@@ -16,4 +16,4 @@ const PortfolioPage = () => {
   )
 }
 
-export default PortfolioPage
+export default ProjectPage
