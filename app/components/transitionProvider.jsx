@@ -28,7 +28,7 @@ const TransitionProvider = ({ children }) => {
                 transition = {{duration: 0.5, ease: "easeOut"}} > {pathName}
             </motion.div>
 
-            <motion.div className='w-screen h-screen fixed bg-red-500 rounded-md bottom-0 z-30'
+            <motion.div className='w-screen h-screen fixed bg-black rounded-md bottom-0 z-30'
                 initial = {{height: "100vh"}}
                 animate = {{ height: "0vh", transition: {delay: 0.5}}} >
             </motion.div>
